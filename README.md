@@ -23,6 +23,6 @@ Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objeti
 - **Back-end:** JavaScript
 - **Banco de Dados:** MySQL
 
-## 📷 By
+## 🧠 Equipe
 
 - **Devs:** @bxnefly, @issayz, @Gustavoneves07, @Fallenzz2 & @carambapedro
