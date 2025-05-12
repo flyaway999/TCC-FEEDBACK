@@ -1,0 +1,1 @@
+location.href = "file:///C:/Users/GUSTAVOAUGUSTOMASCAR/Documents/TCC-Trabalho/TCC-FEEDBACK/tela-de-login/teladeinicio.html"
