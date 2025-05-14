@@ -1,5 +1,15 @@
-/meu-site
-├── index.html            ← Tela de login
-├── styles.css
-└── paginas/
-    └── teladeinicio.html ← Página após login
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(150),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE logins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    login_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ip_address VARCHAR(45),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
