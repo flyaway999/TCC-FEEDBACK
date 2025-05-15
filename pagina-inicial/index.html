@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login - Feedback Escolar</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="images.png" type="image/x-icon" />
 </head>
 <body>
@@ -24,7 +24,23 @@
     <p class="footer-text">© 2025 Alfredo Cardoso. Todos os direitos reservados.</p>
   </div>
 
-  <script src="scripts.js"></script>
+  <script>
+    function redirectLogin(event) {
+      event.preventDefault();
+
+      const emailInput = document.getElementById("email");
+      const email = emailInput.value.trim().toLowerCase();
+      const dominioValido = "@aluno.educacao.sp.gov.br";
+
+      if (!email.endsWith(dominioValido)) {
+        alert("Por favor, use seu e-mail institucional para entrar.");
+        emailInput.focus();
+        return false;
+      }
+
+      // Testa se a página existe (opcional) e redireciona
+      window.location.href = "./pagina-inicial/teladeinicio.html";
+    }
+  </script>
 </body>
 </html>
-
