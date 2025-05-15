@@ -1,15 +1,12 @@
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(150),
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-);
+TCC-FEEDBACK/
+├── index.html                   <-- Página principal (login)
+├── styles.css                  <-- Estilos globais
+├── images.png                  <-- Ícone do site
+├── pagina-inicial/
+│   └── telainicio.html         <-- Página que será aberta após login
+├── js/
+│   ├── script.js               <-- (opcional) Coloque seus scripts aqui
+│   └── conexao.js              <-- (opcional) Código relacionado ao backend
+├── bd.sql                      <-- Banco de dados (caso use)
+└── README.md
 
-CREATE TABLE logins (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    login_time DATETIME DEFAULT CURRENT_TIMESTAMP,
-    ip_address VARCHAR(45),
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
