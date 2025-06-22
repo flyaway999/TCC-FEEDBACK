@@ -14,7 +14,18 @@ function redirectLogin(event) {
   }
 
   // Se o email é válido, redireciona para a página inicial
-  window.location.href = "./pagina-inicial/teladeinicio.html";
+  window.location.href = "../home-page/index.html";
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector("form"); // ou use um id, ex: #login-form
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault(); // impede envio padrão
+      // Aqui você pode colocar uma validação fictícia
+      // Se for bem-sucedido, redireciona
+      window.location.href = "teladeinicio.html";
+    });
+  }
+});
