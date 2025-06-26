@@ -2,21 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Página Inicial</title>
+  <title>Sua Voz Importa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
+      background-color: #f5f5f5;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
     }
-
-    h1 {
-      color: #007bff;
+    .btn-opcao {
+      width: 200px;
+      margin: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Bem-vindo à Página Inicial do Sistema!</h1>
-  <p>Você entrou com sucesso.</p>
+
+  <div class="container mt-5">
+    <h1>Mensagens da Comunidade</h1>
+    
+    <!-- Carrossel de mensagens -->
+    <div id="mensagemCarrossel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p>"Esse site realmente me ouviu. Obrigado!"</p>
+        </div>
+        <div class="carousel-item">
+          <p>"Mandei uma sugestão e foi analisada em 2 dias."</p>
+        </div>
+        <div class="carousel-item">
+          <p>"A denúncia foi tratada com seriedade."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="mt-4">
+      <a href="denuncia.html" class="btn btn-danger btn-opcao">Denúncia</a>
+      <a href="sugestao.html" class="btn btn-warning btn-opcao">Sugestão</a>
+      <a href="elogios.html" class="btn btn-success btn-opcao">Elogios</a>
+      <a href="critica.html" class="btn btn-primary btn-opcao">Crítica</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
