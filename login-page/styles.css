@@ -22,10 +22,18 @@ body {
   max-width: 400px;
 }
 
+/* Texto Feedback Escolar preto normal, azul no hover com efeito de escala */
 h1 {
   text-align: center;
   margin-bottom: 1.5rem;
+  color: #000000;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+h1:hover {
   color: #1a73e8;
+  transform: scale(1.08);
 }
 
 label {
@@ -49,26 +57,78 @@ input:focus {
   border-color: #1a73e8;
 }
 
+/* Botão Entrar com fundo preto e texto branco */
 button {
-  width: 100%;
-  padding: 0.8rem;
-  margin-top: 1.5rem;
-  background: #1a73e8;
-  color: white;
+  position: relative;
+  display: inline-block;
   border: none;
-  border-radius: 8px;
+  outline: none;
+  padding: 0.8rem 2rem;
+  margin: 1.5rem auto 0;
   font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #000000;
+  color: white;
   cursor: pointer;
-  transition: background 0.3s ease;
+  overflow: hidden;
+  letter-spacing: 0.05rem;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Texto dentro do botão */
+button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+/* Barra preta inclinada que sai pra fora */
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: #000;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: 1;
+}
+
+/* Fundo azul que vai “crescer” da esquerda para direita */
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #1a73e8;
+  transition: width 0.5s ease;
+  z-index: 0;
+}
+
+/* Ao passar o mouse, barra preta sai e fundo azul cresce */
+button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+/* Texto muda para branco */
+button:hover span {
+  color: white;
+}
+
+/* Botão “avança” e sombra */
 button:hover {
-  background: #1669c1;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.footer-text {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #999;
-  margin-top: 1.5rem;
-}
