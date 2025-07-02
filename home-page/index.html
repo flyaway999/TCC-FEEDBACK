@@ -3,16 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Sua Voz Importa</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
-      background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      font-family: 'Poppins', sans-serif;
       text-align: center;
     }
+
     .btn-opcao {
-      width: 200px;
+      display: inline-block;
+      position: relative;
+      border: none;
+      outline: none;
+      padding: 0.9rem 2rem;
       margin: 10px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 50px;
+      background: #66ff66;
+      color: ghostwhite;
+      text-decoration: none;
+      overflow: hidden;
+      letter-spacing: 0.05rem;
+      transition: background 0.3s, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-opcao span {
+      position: relative;
+      z-index: 10;
+      transition: color 0.4s;
+    }
+
+    .btn-opcao:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-opcao:hover span {
+      color: rgb(255, 255, 255);
+    }
+
+    .btn-opcao::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 120%;
+      height: 100%;
+      background: #000;
+      transform: skew(30deg);
+      transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      z-index: 0;
+    }
+
+    .btn-opcao:hover::before {
+      transform: translate3d(100%, 0, 0);
+    }
+
+    .botoes-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 29px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -20,7 +80,7 @@
 
   <div class="container mt-5">
     <h1>Mensagens da Comunidade</h1>
-    
+
     <!-- Carrossel de mensagens -->
     <div id="mensagemCarrossel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -36,12 +96,12 @@
       </div>
     </div>
 
-    <!-- Botões -->
-    <div class="mt-4">
-      <a href="denuncia.html" class="btn btn-danger btn-opcao">Denúncia</a>
-      <a href="sugestao.html" class="btn btn-warning btn-opcao">Sugestão</a>
-      <a href="elogios.html" class="btn btn-success btn-opcao">Elogios</a>
-      <a href="critica.html" class="btn btn-primary btn-opcao">Crítica</a>
+    <!-- Botões com efeito -->
+    <div class="botoes-container">
+      <a href="denuncia.html" class="btn-opcao" style="background: #ff0000;"><span>Denúncia</span></a>
+      <a href="sugestao.html" class="btn-opcao" style="background: #ffc107;"><span>Sugestão</span></a>
+      <a href="elogios.html" class="btn-opcao" style="background: #0fe140;"><span>Elogios</span></a>
+      <a href="critica.html" class="btn-opcao" style="background: #007bff;"><span>Crítica</span></a>
     </div>
   </div>
 
