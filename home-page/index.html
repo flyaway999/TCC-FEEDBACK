@@ -81,6 +81,17 @@
 
   <style>
 
+.titulo-mensagens {
+  font-family: 'Segoe UI', 'Roboto', sans-serif; /* moderna e leve */
+  font-weight: 800; /* bold forte */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem; /* espaçamento até as mensagens */
+  letter-spacing: 1px; /* leve espaçamento entre letras */
+  color: #333; /* cor sóbria e moderna */
+}
+
+
     .logo {
   font-size: 1.3rem;
   font-weight: 600;
@@ -169,12 +180,25 @@
       gap: 100px;
       margin-top: 30px;
     }
+
+
+    #tituloAnimado span {
+  transition: color 0.3s;
+  cursor: default;
+}
+
+#tituloAnimado span:hover {
+  color: hsl(var(--hue), 100%, 50%);
+}
+
   </style>
 </head>
 <body>
 
   <div class="container mt-5">
-    <h1>Mensagens da Comunidade</h1>
+  <h1 id="tituloAnimado">Mensagens da Comunidade</h1>
+</div>
+
 
     <!-- Carrossel de mensagens -->
    <div id="mensagemCarrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -370,6 +394,25 @@
     container.querySelectorAll(".carousel-item").forEach((item, index) => {
       item.classList.toggle("active", index === 0);
     });
+  });
+</script>
+
+
+<script>
+  const titulo = document.getElementById("tituloAnimado");
+  const textoOriginal = titulo.textContent;
+  titulo.innerHTML = '';
+
+  [...textoOriginal].forEach(letra => {
+    const span = document.createElement('span');
+    span.textContent = letra;
+
+    span.addEventListener('mouseover', () => {
+      const hue = Math.floor(Math.random() * 360); // cor aleatória
+      span.style.setProperty('--hue', hue);
+    });
+
+    titulo.appendChild(span);
   });
 </script>
 
