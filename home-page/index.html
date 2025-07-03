@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Feedback Escolar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -125,64 +125,89 @@
       color: hsl(var(--hue), 100%, 50%);
     }
 
+    .img-arredondada {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      border-radius: 20px; /* RETÂNGULO com bordas arredondadas */
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .img-arredondada:hover {
+      transform: scale(1.05);
+    }
+
     footer {
-  background-color: #f7f7f7;
-  border-top: 1px solid #e0e0e0;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 1rem;
-}
+      background-color: #f7f7f7;
+      border-top: 1px solid #e0e0e0;
+      padding: 1.5rem 2rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      color: #555;
+    }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 1rem;
-}
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      text-align: center;
+    }
 
-.footer-logo {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #000;
-  cursor: default;
-  user-select: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
+    footer a {
+      text-decoration: none;
+      color: #555;
+      transition: color 0.3s;
+    }
 
-.footer-logo:hover {
-  transform: scale(1.1);
-  color: #1a73e8;
-}
+    footer a:hover {
+      color: #1a73e8;
+    }
 
-.footer-nav {
-  background-color: #ffffff;
-  padding: 0.4rem 1rem;
-  border-radius: 50px;
-  display: flex;
-  gap: 1.2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  flex-wrap: wrap;
-}
+    .img-vertical {
+      width: 100%;
+      max-width: 320px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
 
-.footer-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s, transform 0.3s;
-}
+    .img-vertical:hover {
+      transform: scale(1.05);
+    }
 
-.footer-nav a:hover {
-  color: #1a73e8;
-  transform: scale(1.1);
-}
+    /* Títulos principais sem fundo, preto, com hover azul + zoom */
+    .titulo-principal {
+      color: #000;
+      transition: color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 2rem; /* espaçamento maior para afastar das caixas */
+    }
 
+    .titulo-principal:hover {
+      color: #1a73e8;
+      transform: scale(1.1);
+    }
+
+    /* Títulos menores sem fundo, preto normal e hover azul + zoom */
+    .titulo-menor {
+      color: #000;
+      transition: color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .titulo-menor:hover {
+      color: #1a73e8;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -190,7 +215,7 @@
   <header>
     <div class="logo">Feedback Escolar</div>
     <nav class="nav-links">
-      <a href="#vantagens">Vantagens</a>
+      <a href="#vantagens">Escola</a>
       <a href="#tipos">Tipos de Feedback</a>
       <a href="#equipe">Equipe</a>
       <a href="#privacidade">Privacidade</a>
@@ -201,95 +226,227 @@
     <h1 id="tituloAnimado">Mensagens da Comunidade</h1>
   </div>
 
-  <div id="mensagemCarrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner">
-      <div class="carousel-item active"><p>"Esse site realmente me ouviu. Obrigado!"</p></div>
-<div class="carousel-item"><p>"Mandei uma sugestão e foi analisada em 2 dias."</p></div>
-<div class="carousel-item"><p>"Transparência total."</p></div>
-<div class="carousel-item"><p>"Meus elogios foram recebidos."</p></div>
-<div class="carousel-item"><p>"Muito melhor do que imaginava."</p></div>
-<div class="carousel-item"><p>"Muito fácil de usar."</p></div>
-<div class="carousel-item"><p>"O site é incrível!"</p></div>
-<div class="carousel-item"><p>"Realmente ouve os alunos."</p></div>
-<div class="carousel-item"><p>"Interface limpa e funcional."</p></div>
-<div class="carousel-item"><p>"Design bonito e intuitivo."</p></div>
-<div class="carousel-item"><p>"Me surpreendeu positivamente."</p></div>
-<div class="carousel-item"><p>"O retorno foi super rápido."</p></div>
-<div class="carousel-item"><p>"Simplesmente sensacional."</p></div>
-<div class="carousel-item"><p>"Agora posso opinar com liberdade."</p></div>
-<div class="carousel-item"><p>"Parabéns pela plataforma!"</p></div>
-<div class="carousel-item"><p>"Nota 10 para esse site."</p></div>
-<div class="carousel-item"><p>"Ferramenta essencial para a escola."</p></div>
-<div class="carousel-item"><p>"Já vejo mudanças na escola."</p></div>
-<div class="carousel-item"><p>"Adorei a iniciativa."</p></div>
-<div class="carousel-item"><p>"Me senti valorizado."</p></div>
-      <div class="carousel-item active">
-        <p>"Esse site realmente me ouviu. Obrigado!"</p>
-      </div>
-      <div class="carousel-item">
-        <p>"Mandei uma sugestão e foi analisada em 2 dias."</p>
-      </div>
-      <!-- Outros itens omitidos por brevidade -->
-    </div>
+  <div
+  id="mensagemCarrossel"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-interval="3000"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active"><p>"Esse site realmente me ouviu. Obrigado!"</p></div>
+    <div class="carousel-item"><p>"Mandei uma sugestão e foi analisada em 2 dias."</p></div>
+    <div class="carousel-item"><p>"Muito fácil de usar."</p></div>
+    <div class="carousel-item"><p>"Design bonito e intuitivo."</p></div>
+    <div class="carousel-item"><p>"A plataforma é super responsiva e rápida."</p></div>
+    <div class="carousel-item"><p>"Me senti ouvido e valorizado."</p></div>
+    <div class="carousel-item"><p>"A equipe respondeu minhas dúvidas com rapidez."</p></div>
+    <div class="carousel-item"><p>"Ótima experiência de usuário."</p></div>
+    <div class="carousel-item"><p>"Facilita muito a comunicação entre alunos e escola."</p></div>
+    <div class="carousel-item"><p>"Amei a interface moderna e clean."</p></div>
+    <div class="carousel-item"><p>"Sistema eficiente e confiável."</p></div>
+    <div class="carousel-item"><p>"Recomendo para todos os estudantes."</p></div>
+    <div class="carousel-item"><p>"As atualizações são constantes e úteis."</p></div>
+    <div class="carousel-item"><p>"Suporte sempre prestativo e gentil."</p></div>
+    <div class="carousel-item"><p>"Me ajudou a expressar minhas ideias com clareza."</p></div>
+    <div class="carousel-item"><p>"Muito bom para receber feedbacks anônimos."</p></div>
+    <div class="carousel-item"><p>"A escola realmente se importa com nossa opinião."</p></div>
+    <div class="carousel-item"><p>"Sistema intuitivo e fácil de navegar."</p></div>
+    <div class="carousel-item"><p>"Adorei o design responsivo para celular."</p></div>
+    <div class="carousel-item"><p>"Sempre volto para deixar meu feedback."</p></div>
+    <div class="carousel-item"><p>"O processo é rápido e simples."</p></div>
+    <div class="carousel-item"><p>"Segurança e privacidade garantidas."</p></div>
+    <div class="carousel-item"><p>"Feedbacks realmente fazem diferença."</p></div>
+    <div class="carousel-item"><p>"A escola mudou muito com base nas sugestões."</p></div>
+    <div class="carousel-item"><p>"Ferramenta indispensável para alunos e professores."</p></div>
+    <div class="carousel-item"><p>"Gostei muito do suporte que recebi."</p></div>
+    <div class="carousel-item"><p>"Interface clara e sem complicações."</p></div>
+    <div class="carousel-item"><p>"Adorei poder dar sugestões anonimamente."</p></div>
+    <div class="carousel-item"><p>"O carrossel deixa o site dinâmico e atrativo."</p></div>
+    <div class="carousel-item"><p>"A comunicação melhorou muito na escola."</p></div>
+    <div class="carousel-item"><p>"Sistema muito bem pensado e estruturado."</p></div>
+    <div class="carousel-item"><p>"Feedbacks recebidos sempre são considerados."</p></div>
+    <div class="carousel-item"><p>"Amei o layout e a paleta de cores."</p></div>
+    <div class="carousel-item"><p>"Facilita o diálogo entre alunos e coordenação."</p></div>
+    <div class="carousel-item"><p>"Plataforma muito estável e rápida."</p></div>
+    <div class="carousel-item"><p>"Muito bom para incentivar melhorias contínuas."</p></div>
+    <div class="carousel-item"><p>"Estou satisfeito com a transparência do sistema."</p></div>
+    <div class="carousel-item"><p>"Permite que todos sejam ouvidos sem medo."</p></div>
+    <div class="carousel-item"><p>"Plataforma segura e confiável."</p></div>
+    <div class="carousel-item"><p>"Recebi retorno rápido da equipe."</p></div>
+    <div class="carousel-item"><p>"O site ajuda a melhorar o ambiente escolar."</p></div>
+    <div class="carousel-item"><p>"O design é moderno e funcional."</p></div>
+    <div class="carousel-item"><p>"Facilidade para enviar denúncias e sugestões."</p></div>
+    <div class="carousel-item"><p>"Sistema que realmente cumpre o prometido."</p></div>
+    <div class="carousel-item"><p>"Gostei do modo anônimo para dar opiniões."</p></div>
+    <div class="carousel-item"><p>"Comunicação rápida e eficiente."</p></div>
+    <div class="carousel-item"><p>"Feedbacks anônimos fazem a diferença."</p></div>
+    <div class="carousel-item"><p>"A plataforma é amigável e acolhedora."</p></div>
+    <div class="carousel-item"><p>"Sistema que ajuda a melhorar a escola todos os dias."</p></div>
+    <div class="carousel-item"><p>"Fácil de usar e com ótimo design."</p></div>
   </div>
+</div>
 
   <div class="botoes-container">
-    <a href="denuncia.html" class="btn-opcao" style="background: #ff0000;"><span>Denúncia</span></a>
-    <a href="sugestao.html" class="btn-opcao" style="background: #ffc107;"><span>Sugestão</span></a>
-    <a href="elogios.html" class="btn-opcao" style="background: #0fe140;"><span>Elogios</span></a>
-    <a href="critica.html" class="btn-opcao" style="background: #007bff;"><span>Crítica</span></a>
+    <a href="#" class="btn-opcao" style="background: #ff0000;"><span>Denúncia</span></a>
+    <a href="#" class="btn-opcao" style="background: #ffc107;"><span>Sugestão</span></a>
+    <a href="#" class="btn-opcao" style="background: #0fe140;"><span>Elogios</span></a>
+    <a href="#" class="btn-opcao" style="background: #007bff;"><span>Crítica</span></a>
   </div>
 
-  <hr class="my-5" style="border-color: #ccc; width: 80%; margin: auto;">
-
-  <section class="info-section py-5">
+  <section class="escola-section py-5" id="vantagens">
     <div class="container">
-      <h2 class="text-center fw-bold mb-5" style="font-size: 2rem; letter-spacing: 1px;">Como Funciona</h2>
+      <div class="row align-items-center">
+        <div class="col-md-5 text-center mb-4 mb-md-0">
+          <img
+            src="imgs/ESCOLA2.png"
+            alt="Imagem da Escola"
+            class="img-fluid img-vertical"
+            style="margin-right: 30px;"
+          />
+        </div>
 
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6 text-center">
-          <img src="https://cdn-icons-png.flaticon.com/512/3771/3771333.png" alt="Vantagens" class="img-fluid" width="200">
-        </div>
-        <div class="col-md-6 text-start">
-          <h4 class="fw-bold mb-2 text-primary">VANTAGENS</h4>
-          <p>Descubra os benefícios de dar e receber feedback: fortalece a comunicação, melhora o ambiente escolar e valoriza a opinião de todos.</p>
-        </div>
-      </div>
-
-      <div class="row align-items-center mb-5 flex-md-row-reverse">
-        <div class="col-md-6 text-center">
-          <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Tipos" class="img-fluid" width="200">
-        </div>
-        <div class="col-md-6 text-start">
-          <h4 class="fw-bold mb-2 text-primary">TIPOS DE FEEDBACK</h4>
-          <p>Elogios, sugestões, críticas e denúncias: cada um tem seu papel importante. Saiba como utilizá-los corretamente.</p>
-        </div>
-      </div>
-
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6 text-center">
-          <img src="https://cdn-icons-png.flaticon.com/512/2194/2194679.png" alt="Equipe" class="img-fluid" width="200">
-        </div>
-        <div class="col-md-6 text-start">
-          <h4 class="fw-bold mb-2 text-primary">EQUIPE</h4>
-          <p>Uma equipe dedicada analisa cuidadosamente cada mensagem recebida, com seriedade e agilidade.</p>
-        </div>
-      </div>
-
-      <div class="row align-items-center mb-5 flex-md-row-reverse">
-        <div class="col-md-6 text-center">
-          <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Privacidade" class="img-fluid" width="200">
-        </div>
-        <div class="col-md-6 text-start">
-          <h4 class="fw-bold mb-2 text-primary">PRIVACIDADE</h4>
-          <p>Suas informações estão protegidas. Todos os feedbacks são anônimos e tratados com total sigilo.</p>
+        <div class="col-md-7 text-start">
+          <h2
+            class="fw-bold titulo-principal"
+            style="font-size: 2rem; margin-top: -20px;"
+          >
+            Vantagens
+          </h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div style="background: #e8f0fe; border-radius: 16px; padding: 16px;">
+                <h5 class="fw-semibold text-dark mb-2 titulo-menor">🙋 Comunicação Clara</h5>
+                <p class="mb-0">
+                  Facilitamos o diálogo entre alunos, professores e escola.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div style="background: #e8f0fe; border-radius: 16px; padding: 16px;">
+                <h5 class="fw-semibold text-dark mb-2 titulo-menor">🤝 Feedback Anônimo</h5>
+                <p class="mb-0">
+                  Opiniões enviadas com total privacidade.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div style="background: #e8f0fe; border-radius: 16px; padding: 16px;">
+                <h5 class="fw-semibold text-dark mb-2 titulo-menor">😼 Fácil de Usar</h5>
+                <p class="mb-0">
+                  Incentivamos ideias criativas, trabalho em equipe e o uso de
+                  tecnologia na aprendizagem.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div style="background: #e8f0fe; border-radius: 16px; padding: 16px;">
+                <h5 class="fw-semibold text-dark mb-2 titulo-menor">🎯 Engajamento</h5>
+                <p class="mb-0">
+                  Alunos participam mais da vida escolar.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="info-section py-5">
+    <div class="container">
+      <h2
+        class="text-center fw-bold titulo-principal"
+        style="font-size: 2rem; margin-bottom: 2rem;"
+      >
+        Sobre
+      </h2>
+      <hr
+        style="
+          width: 120px;
+          height: 4px;
+          background-color: #1a73e8;
+          margin: 0 auto 3rem auto;
+          border: none;
+          border-radius: 2px;
+        "
+      />
+
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6 text-center">
+          <img src="imgs/PRIVACIDADE.PNG" class="img-fluid img-arredondada" alt="Vantagens" />
+        </div>
+        <div class="col-md-6 text-start">
+          <h4 class="fw-bold mb-3 titulo-menor">PRIVACIDADE</h4>
+          <p>
+            Fortalece a comunicação, melhora o ambiente escolar e valoriza a
+            opinião de todos.
+          </p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5 flex-md-row-reverse">
+        <div class="col-md-6 text-center">
+          <img src="pressets/TESTE.PNG" class="img-fluid img-arredondada" alt="Tipos" />
+        </div>
+        <div class="col-md-6 text-start">
+          <h4 class="fw-bold mb-3 titulo-menor">TIPOS DE FEEDBACK</h4>
+          <p>
+            Elogios, sugestões, críticas e denúncias: cada um tem seu papel
+            importante.
+          </p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6 text-center">
+          <img src="pressets/ESCOLA.PNG" class="img-fluid img-arredondada" alt="Equipe" />
+        </div>
+        <div class="col-md-6 text-start">
+          <h4 class="fw-bold mb-3 titulo-menor">EQUIPE</h4>
+          <p>Uma equipe dedicada analisa cuidadosamente cada mensagem recebida.</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5 flex-md-row-reverse">
+        <div class="col-md-6 text-center">
+          <img src="pressets/TESTE2.PNG" class="img-fluid img-arredondada" alt="Privacidade" />
+        </div>
+        <div class="col-md-6 text-start">
+          <h4 class="fw-bold mb-3 titulo-menor">PRIVACIDADE</h4>
+          <p>Todos os feedbacks são anônimos e tratados com total sigilo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>© Alfredo Cardoso - Todos os direitos reservados</div>
+      <div>
+        <a href="#">Compartilhar</a> |
+        <a href="#">Dúvidas</a> |
+        <a href="#">Contato</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Animação do título
+    const titulo = document.getElementById("tituloAnimado");
+    const textoOriginal = titulo.textContent;
+    titulo.innerHTML = "";
+    [...textoOriginal].forEach((letra) => {
+      const span = document.createElement("span");
+      span.textContent = letra;
+      span.addEventListener("mouseover", () => {
+        const hue = Math.floor(Math.random() * 360);
+        span.style.setProperty("--hue", hue);
+      });
+      titulo.appendChild(span);
+    });
+
+    // Embaralhar mensagens do carrossel
     window.addEventListener("DOMContentLoaded", () => {
       const container = document.querySelector(".carousel-inner");
       const items = Array.from(container.children);
@@ -302,57 +459,6 @@
         item.classList.toggle("active", index === 0);
       });
     });
-
-    const titulo = document.getElementById("tituloAnimado");
-    const textoOriginal = titulo.textContent;
-    titulo.innerHTML = '';
-    [...textoOriginal].forEach(letra => {
-      const span = document.createElement('span');
-      span.textContent = letra;
-      span.addEventListener('mouseover', () => {
-        const hue = Math.floor(Math.random() * 360);
-        span.style.setProperty('--hue', hue);
-      });
-      titulo.appendChild(span);
-    });
   </script>
-
-  
-<footer style="background-color: #f7f7f7; border-top: 1px solid #e0e0e0; padding: 1.5rem 2rem; font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: #555;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; text-align: center;">
-    
-    <div style="flex: 1; min-width: 200px;">© Alfredo Cardoso - Todos os direitos reservados</div>
-
-    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; flex: 1; min-width: 200px;">
-      <a href="#" style="text-decoration: none; color: #555; transition: color 0.3s;">Compartilhar</a>
-      <a href="#" style="text-decoration: none; color: #555; transition: color 0.3s;">Dúvidas</a>
-      <a href="#" style="text-decoration: none; color: #555; transition: color 0.3s;">Contato</a>
-    </div>
-
-  </div>
-</footer>
-
-
-<script>
-  const btn = document.querySelector('footer button');
-  const span = btn.querySelector('span');
-  const icons = btn.querySelector('div');
-
-  btn.addEventListener('mouseenter', () => {
-    span.style.width = '0';
-    span.style.opacity = '0';
-    icons.style.width = '100%';
-    icons.style.opacity = '1';
-    icons.style.zIndex = '2';
-  });
-
-  btn.addEventListener('mouseleave', () => {
-    span.style.width = '8rem';
-    span.style.opacity = '1';
-    icons.style.width = '0';
-    icons.style.opacity = '0';
-    icons.style.zIndex = '0';
-  });
-</script>
 </body>
 </html>
