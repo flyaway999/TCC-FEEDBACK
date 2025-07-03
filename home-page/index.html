@@ -293,6 +293,13 @@
     <a href="#" class="btn-opcao" style="background: #007bff;"><span>Crítica</span></a>
   </div>
 
+  <section class="container mt-5" id="como-funciona">
+  <button class="btn btn-outline-primary mb-3" onclick="toggleComoFunciona()">Como funciona?</button>
+  <div id="comoFuncionaTexto" style="display: none; text-align: left; max-width: 800px; margin: auto; background-color: #f9f9f9; padding: 1rem 1.5rem; border-left: 4px solid #1a73e8; border-radius: 8px;">
+    <p>Nosso site permite que qualquer membro da comunidade escolar envie mensagens anônimas, sejam elas elogios, críticas, sugestões ou denúncias. As mensagens são recebidas com segurança, analisadas com responsabilidade e ajudam a melhorar o ambiente escolar de forma colaborativa.</p>
+  </div>
+</section>
+
   <section class="escola-section py-5" id="vantagens">
     <div class="container">
       <div class="row align-items-center">
@@ -378,24 +385,27 @@
         <div class="col-md-6 text-start">
           <h4 class="fw-bold mb-3 titulo-menor">PRIVACIDADE</h4>
           <p>
-            Fortalece a comunicação, melhora o ambiente escolar e valoriza a
-            opinião de todos.
+            Todas as mensagens enviadas no site são 100% anônimas e não registram dados pessoais dos usuários. A privacidade é uma prioridade: nenhuma informação é compartilhada, e o conteúdo é analisado com responsabilidade, sempre com o objetivo de melhorar o ambiente escolar de forma segura e ética.
           </p>
         </div>
       </div>
 
       <div class="row align-items-center mb-5 flex-md-row-reverse">
-        <div class="col-md-6 text-center">
-          <img src="imgs/FEEDBACK.PNG" class="img-fluid img-arredondada" alt="Tipos" />
-        </div>
-        <div class="col-md-6 text-start">
-          <h4 class="fw-bold mb-3 titulo-menor">TIPOS DE FEEDBACK</h4>
-          <p>
-            Elogios, sugestões, críticas e denúncias: cada um tem seu papel
-            importante.
-          </p>
-        </div>
-      </div>
+  <div class="col-md-6 text-center">
+    <img src="imgs/FEEDBACK.PNG" class="img-fluid img-arredondada" alt="Tipos" />
+  </div>
+  <div class="col-md-6 text-start">
+    <h4 class="fw-bold mb-3 titulo-menor">TIPOS DE FEEDBACK</h4>
+    <p>
+      <span style="color:#28a745; font-weight: 600;">Elogios</span> — para valorizar atitudes positivas e boas práticas.<br />
+      <span style="color:#007bff; font-weight: 600;">Críticas</span> — para apontar problemas de forma construtiva.<br />
+      <span style="color:#ffc107; font-weight: 600;">Sugestões</span> — ideias para melhorar o ambiente e os processos escolares.<br />
+      <span style="color:#dc3545; font-weight: 600;">Denúncias</span> — para relatar situações graves de forma anônima e segura.
+    </p>
+  </div>
+</div>
+
+      
 
       <div class="row align-items-center mb-5">
         <div class="col-md-6 text-center">
@@ -413,7 +423,7 @@
         </div>
         <div class="col-md-6 text-start">
           <h4 class="fw-bold mb-3 titulo-menor">ESCOLA</h4>
-          <p>Todos os feedbacks são anônimos e tratados com total sigilo.</p>
+          <p>O intuito deste site é contribuir para a melhoria geral da escola, promovendo uma comunicação clara e eficaz entre alunos, professores e toda a comunidade escolar. Por meio do feedback anônimo, a plataforma facilita a identificação de pontos fortes e oportunidades de melhoria, fortalecendo o diálogo e o engajamento de todos.</p>
         </div>
       </div>
     </div>
@@ -460,5 +470,13 @@
       });
     });
   </script>
+
+  <script>
+  function toggleComoFunciona() {
+    const texto = document.getElementById("comoFuncionaTexto");
+    texto.style.display = (texto.style.display === "none" || texto.style.display === "") ? "block" : "none";
+  }
+</script>
+
 </body>
 </html>
