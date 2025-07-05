@@ -18,7 +18,7 @@ Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objeti
 - 📩 Envio de mensagens anônimas ou identificadas.
 - 💬 Registro de sugestões, críticas e elogios.
 - 🚨 Canal para denúncias com proteção de identidade.
-- 🧩 Filtros por tipo de mensagem (sugestão, crítica, denúncia e elogios)
+- 🧩 Filtros por tipo de mensagem (sugestão, crítica, denúncia e etc..)
 
 ## 🛠️ Tecnologias Utilizadas
 
