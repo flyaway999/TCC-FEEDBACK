@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página de Feedback</title>
+  <title>Página de Sugestão</title>
   <style>
     * {
       margin: 0;
@@ -13,7 +13,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #ffffff; /* fundo branco total */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -25,7 +25,7 @@
       width: 500px;
       border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .header {
@@ -46,7 +46,7 @@
       width: 100%;
       padding: 15px;
       border-radius: 10px;
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
       font-size: 16px;
     }
 
@@ -67,6 +67,7 @@
       border-radius: 10px;
       cursor: pointer;
       font-size: 16px;
+      transition: background-color 0.3s ease;
     }
 
     .btn-submit:hover {
@@ -81,7 +82,7 @@
 <body>
   <div class="feedback-container">
     <div class="header">
-      Diga-nos o que você acha!
+      Diga-nos a sua sugestão
     </div>
     <form
       action="https://formspree.io/f/xnnvydye"
@@ -99,7 +100,7 @@
       <div class="form-group">
         <textarea
           class="text-area"
-          placeholder="Seu feedback"
+          placeholder="Sua sugestão"
           name="mensagem"
           required
         ></textarea>
