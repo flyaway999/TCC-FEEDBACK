@@ -13,7 +13,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #ffffff; /* fundo branco total */
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,10 +26,17 @@
       border-radius: 20px;
       padding: 30px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efeito ao passar o mouse */
+    .feedback-container:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
     }
 
     .header {
-      background-color: #4CAF50;
+      background-color: #ffc107;
       border-radius: 15px 15px 0 0;
       padding: 20px;
       text-align: center;
@@ -48,6 +55,13 @@
       border-radius: 10px;
       border: 1px solid #ccc;
       font-size: 16px;
+      transition: border 0.2s ease;
+    }
+
+    .input-field:focus,
+    .text-area:focus {
+      border: 1px solid #4CAF50;
+      outline: none;
     }
 
     .input-field {
@@ -71,7 +85,7 @@
     }
 
     .btn-submit:hover {
-      background-color: #45a049;
+      background-color: #3b9c40;
     }
 
     .submit-container {
