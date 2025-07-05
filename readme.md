@@ -1,8 +1,8 @@
-# 📚 Projeto TCC – Plataforma Escolar de Feedback
+# 📚 Projeto TCC – Inpution
 
 Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objetivo principal desenvolver uma **plataforma digital voltada para o ambiente escolar**, onde alunos, professores e colaboradores possam enviar **feedbacks, sugestões, críticas e denúncias** de forma segura, acessível e organizada.
 
-## 🏠 Demonstração - tela de login
+## 🏠 Inpution - Home page
 ![Captura de Tela (47)](https://github.com/user-attachments/assets/d22ae7fa-e54c-4472-8ef6-a9dd540371de)
 
 
@@ -18,8 +18,7 @@ Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objeti
 - 📩 Envio de mensagens anônimas ou identificadas.
 - 💬 Registro de sugestões, críticas e elogios.
 - 🚨 Canal para denúncias com proteção de identidade.
-- 📊 Painel administrativo para gerenciamento e visualização das mensagens.
-- 🧩 Filtros por tipo de mensagem (sugestão, crítica, denúncia, etc.)
+- 🧩 Filtros por tipo de mensagem (sugestão, crítica, denúncia e elogios)
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -29,4 +28,4 @@ Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objeti
 
 ## 🧠 Equipe
 
-- **Devs:** @bxnefly, @issayz, @Gustavoneves07, @Fallenzz2 & @carambapedro
+- **Devs:** @flyaway999, @issayz, @Gustavoneves07, @Fallenzz2 & @carambapedro
