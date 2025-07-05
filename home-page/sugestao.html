@@ -20,6 +20,20 @@
       height: 100vh;
     }
 
+    /* EFEITO FADE-IN */
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .feedback-container {
       background-color: white;
       width: 500px;
@@ -94,7 +108,8 @@
   </style>
 </head>
 <body>
-  <div class="feedback-container">
+  <!-- fade-in aplicado aqui -->
+  <div class="feedback-container fade-in">
     <div class="header">
       Diga-nos a sua sugestão
     </div>
