@@ -4,9 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inpution - Login</title>
-  <link rel="stylesheet" href="styles.css" />
-  
-  <!-- Favicon padrão para todos os navegadores -->
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #000000;
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+
+    h1:hover {
+      color: #1a73e8;
+      transform: scale(1.08);
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+      color: #333;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #1a73e8;
+    }
+
+    button {
+      position: relative;
+      display: inline-block;
+      border: none;
+      outline: none;
+      padding: 0.8rem 2rem;
+      margin: 1.5rem auto 0;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      background: #000000;
+      color: white;
+      cursor: pointer;
+      overflow: hidden;
+      letter-spacing: 0.05rem;
+      width: 100%;
+      max-width: 400px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    button span {
+      position: relative;
+      z-index: 10;
+      transition: color 0.4s;
+    }
+
+    button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 120%;
+      height: 100%;
+      background: #000;
+      transform: skew(30deg);
+      transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      z-index: 1;
+    }
+
+    button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: #1a73e8;
+      transition: width 0.5s ease;
+      z-index: 0;
+    }
+
+    button:hover::before {
+      transform: translate3d(100%, 0, 0);
+    }
+
+    button:hover::after {
+      width: 100%;
+    }
+
+    button:hover span {
+      color: white;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .footer-text {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 </head>
@@ -15,12 +146,12 @@
   <div class="login-container">
     <h1>Inpution</h1>
 
-    <form onsubmit="redirectLogin(event)">
+    <form id="loginForm">
       <label for="email">E-mail institucional</label>
       <input type="email" id="email" name="email" required />
 
       <label for="password">Senha</label>
-      <input type="password" id="password" name="password" required />
+      <input type="password" id="password" name="senha" required />
 
       <button type="submit"><span>Entrar</span></button>
     </form>
@@ -29,22 +160,40 @@
   </div>
 
   <script>
-    function redirectLogin(event) {
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
       const emailInput = document.getElementById("email");
+      const senhaInput = document.getElementById("password");
+
       const email = emailInput.value.trim().toLowerCase();
+      const senha = senhaInput.value;
+
       const dominioValido = "@aluno.educacao.sp.gov.br";
+      const prefixo = email.split('@')[0];
 
       if (!email.endsWith(dominioValido)) {
         alert("Por favor, use seu e-mail institucional para entrar.");
         emailInput.focus();
-        return false;
+        return;
       }
 
-      // Testa se a página existe (opcional) e redireciona
+      if (prefixo.length < 8) {
+        alert("O nome do usuário deve ter no mínimo 9 caracteres antes do '@aluno'.");
+        emailInput.focus();
+        return;
+      }
+
+      if (senha.length < 8) {
+        alert("A senha deve ter pelo menos 8 caracteres.");
+        senhaInput.focus();
+        return;
+      }
+
+      // Tudo certo! Redireciona para o painel
       window.location.href = "../home-page/index.html";
-    }
+    });
   </script>
 </body>
 </html>
