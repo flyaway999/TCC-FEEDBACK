@@ -3,7 +3,7 @@
 Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objetivo principal desenvolver uma **plataforma digital voltada para o ambiente escolar**, onde alunos, professores e colaboradores possam enviar **feedbacks, sugestões, críticas e denúncias** de forma segura, acessível e organizada.
 
 ## 🏠 Demonstração - tela de login
-![Captura de Tela (47)](https://github.com/user-attachments/assets/7a045361-3cb3-4585-9fdb-e4906f94a88f)
+![Captura de Tela (47)](https://github.com/user-attachments/assets/d22ae7fa-e54c-4472-8ef6-a9dd540371de)
 
 
 ## 🎯 Objetivos do Projeto
