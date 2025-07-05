@@ -24,8 +24,8 @@ Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objeti
 
 - **Front-end:** HTML, CSS, JavaScript
 - **Back-end:** JavaScript
-- **Banco de Dados:** MySQL
+- **Banco de Dados:** MySQL e Formspree
 
 ## 🧠 Equipe
 
-- **Devs:** @flyaway999, @issayz, @Gustavoneves07, @Fallenzz2 & @carambapedro
+- **Devs:** @999flyaway, @issayz, @Gustavoneves07, @Fallenzz2 & @carambapedro
