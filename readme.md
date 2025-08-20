@@ -15,8 +15,8 @@ Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objeti
 
 ## 🔐 Funcionalidades
 
-- 📩 Envio de mensagens anônimas ou identificadas.
-- 💬 Registro de sugestões, críticas e elogios.
+- 📩 Envio de mensagens anônimas.
+- 💬 Registro de sugestões
 - 🚨 Canal para denúncias com proteção de identidade.
 - 🧩 Filtros por tipo de mensagem (sugestão, crítica, denúncia e etc..)
 
@@ -24,8 +24,8 @@ Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objeti
 
 - **Front-end:** HTML, CSS, JavaScript
 - **Back-end:** JavaScript
-- **Banco de Dados:** MySQL e Formspree
+- **Banco de Dados:** MySQL (em progresso) e Formspree
 
 ## 🧠 Equipe
 
-- **Devs:** @999flyaway, @issayz, @Gustavoneves07, @Fallenzz2 & @carambapedro
+- **Devs:** @999flyaway, @issayzly07, @Gustavoneves07, @Fallenzz2 & @pedro.qxz
