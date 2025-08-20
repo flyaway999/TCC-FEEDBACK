@@ -3,7 +3,7 @@
 Este projeto é parte do Trabalho de Conclusão de Curso (TCC) e tem como objetivo principal desenvolver uma **plataforma digital voltada para o ambiente escolar**, onde alunos, professores e colaboradores possam enviar **feedbacks, sugestões, críticas e denúncias** de forma segura, acessível e organizada.
 
 ## 🏠 Inpution - Home page
-![Captura de Tela (47)](https://github.com/user-attachments/assets/d22ae7fa-e54c-4472-8ef6-a9dd540371de)
+![Captura de Tela (47)](https://github.com/user-attachments/assets/2bd69788-ed1b-4c1c-aa08-a942dc1919ca)
 
 
 ## 🎯 Objetivos do Projeto
